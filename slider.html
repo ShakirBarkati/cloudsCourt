@@ -8,6 +8,13 @@
   </head>
 
   <style>
+    * {
+      padding: 0px;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* Laptop Size and Default size Start*/
     @keyframes slides {
       from {
         transform: translateX(0);
@@ -18,31 +25,47 @@
       }
     }
 
+    .slider {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+      background-color: #226456;
+      color: white;
+    }
+
+    .text p {
+      color: #FEBB1C;
+    }
+
+
     .logos {
       overflow: hidden;
-      padding: 30px 0px;
       white-space: nowrap;
       position: relative;
+      background-color: #feba1cee;
     }
 
     .logos:before,
     .logos:after {
       position: absolute;
       top: 0;
-      content: '';
-      width: 250px;
+      content: "";
+      width: 120px;
       height: 100%;
+      /* border-radius: 0.5rem; */
       z-index: 2;
     }
 
     .logos:before {
       left: 0;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+      /* background: linear-gradient(to right, #ffffff, #226456);   */
+      background-color: #226456c5;
     }
 
     .logos:after {
       right: 0;
-      background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+      background-color: #226456c5;
     }
 
     .logo_items {
@@ -57,44 +80,163 @@
     .logo_items img {
       height: 9rem;
     }
+
+    /* Laptop Size and Default size End*/
+
+    /* ////////////////////////// */
+
+    /* Extra For Development Start */
+    .btn {
+      padding: 1rem;
+      color: white;
+      margin: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+    }
+
+    .btn a {
+      text-decoration: none;
+    }
+
+    /* Extra For Development End */
+
+    /* ////////////////////////// */
+
+    /* Small Size Mobile Styleing Start */
+
+    @media (min-width: 320px) {
+      .slider {
+        padding: 1.2rem 0px;
+      }
+
+      .text {
+        padding: 0px 1.2rem;
+      }
+
+
+      .text h1 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .text h1 span {
+        color: #FEBB1C;
+      }
+
+      .text p {
+        font-size: 0.7rem;
+      }
+
+      .logos:before,
+      .logos:after {
+        width: 20px;
+        height: 100%;
+      }
+
+      .logo_items img {
+        height: 7rem;
+      }
+    }
+
+    /* Small Size Mobile Styleing End */
+
+    /* Medium Mobile Styling Start */
+
+    @media (min-width:768px) {
+      .text h1 {
+        font-size: 1.9rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .text p {
+        font-size: 0.9rem;
+      }
+
+      .logos:before,
+      .logos:after {
+        width: 50px;
+        height: 100%;
+      }
+    }
+
+    /* Medium Mobile Styling End */
+
+    /* Large Screen Size Start Styling */
+    @media (min-width:1440px) {
+      .text h1 {
+        font-size: 2rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .text p {
+        font-size: 1.2rem;
+      }
+
+      .logo_items img {
+        height: 10rem;
+      }
+
+      .logos:before,
+      .logos:after {
+        width: 80px;
+        height: 100%;
+      }
+    }
+
+    /* Large Screen Size End Styling */
   </style>
 
   <body>
-    <div class="logos">
-      <div class="logo_items">
-        <img src="./before_website_view/img/slider/ecommerce.png" alt="E-Commerce" title="E-Commerce">
-        <img src="./before_website_view/img/slider/car.png" alt="Automotive" title="Automotive">
-        <img src="./before_website_view/img/slider/education.png" alt="Education" title="Education">
-        <img src="./before_website_view/img/slider/entertainment.png" alt="Entertainment" title="Entertainment">
-        <img src="./before_website_view/img/slider/finance.png" alt="Finance" title="Finance">
-        <img src="./before_website_view/img/slider/food.png" alt="Food" title="Food">
-        <img src="./before_website_view/img/slider/healthcare.png" alt="Healthcare" title="Healthcare">
-        <img src="./before_website_view/img/slider/logistics.png" alt="Logistics" title="Logistics">
-        <img src="./before_website_view/img/slider/medical.png" alt="Medical" title="Medical">
-        <img src="./before_website_view/img/slider/manufacturing.png" alt="Manufacturing" title="Manufacturing">
-        <img src="./before_website_view/img/slider/procurement.png" alt="Procurement" title="Procurement">
-        <img src="./before_website_view/img/slider/retailers.png" alt="Retailers" title="Retailers">
-        <img src="./before_website_view/img/slider/realestate.png" alt="Real Estate" title="Real Estate">
-        <img src="./before_website_view/img/slider/saaS.png" alt="SaaS" title="SaaS">
-        <img src="./before_website_view/img/slider/socialNetwork.png" alt="Social Network" title="Social Network">
-
+    <button class="btn"><a href="index.html">Main Home</a></button>
+    <button class="btn">
+      <a href="https://docs.google.com/document/d/1D-nast0dykBWilgEULhCK6FOTu_Qp5zyC81s3njPCY8/edit?usp=sharing"
+        target="_blank">Document</a>
+    </button>
+    <div class="slider">
+      <div class="text">
+        <h1>WE TRANSFORM EVERY INDUSTRY AND <span>BUSINESS</span> PROCESSES.</h1>
+        <p>ISO 9001 CERTIFIED NASSCOM & STPI ACCREDITATION
+        </p>
       </div>
-      <div class="logo_items">
-        <img src="./before_website_view/img/slider/ecommerce.png" alt="E-Commerce" title="E-Commerce">
-        <img src="./before_website_view/img/slider/car.png" alt="Automotive" title="Automotive">
-        <img src="./before_website_view/img/slider/education.png" alt="Education" title="Education">
-        <img src="./before_website_view/img/slider/entertainment.png" alt="Entertainment" title="Entertainment">
-        <img src="./before_website_view/img/slider/finance.png" alt="Finance" title="Finance">
-        <img src="./before_website_view/img/slider/food.png" alt="Food" title="Food">
-        <img src="./before_website_view/img/slider/healthcare.png" alt="Healthcare" title="Healthcare">
-        <img src="./before_website_view/img/slider/logistics.png" alt="Logistics" title="Logistics">
-        <img src="./before_website_view/img/slider/medical.png" alt="Medical" title="Medical">
-        <img src="./before_website_view/img/slider/manufacturing.png" alt="Manufacturing" title="Manufacturing">
-        <img src="./before_website_view/img/slider/procurement.png" alt="Procurement" title="Procurement">
-        <img src="./before_website_view/img/slider/retailers.png" alt="Retailers" title="Retailers">
-        <img src="./before_website_view/img/slider/realestate.png" alt="Real Estate" title="Real Estate">
-        <img src="./before_website_view/img/slider/saaS.png" alt="SaaS" title="SaaS">
-        <img src="./before_website_view/img/slider/socialNetwork.png" alt="Social Network" title="Social Network">
+      <div class="logos">
+        <div class="logo_items">
+          <img src="./before_website_view/img/slider/ecommerce.png" alt="E-Commerce" title="E-Commerce" />
+          <img src="./before_website_view/img/slider/car.png" alt="Automotive" title="Automotive" />
+          <img src="./before_website_view/img/slider/education.png" alt="Education" title="Education" />
+          <img src="./before_website_view/img/slider/entertainment.png" alt="Entertainment" title="Entertainment" />
+          <img src="./before_website_view/img/slider/finance.png" alt="Finance" title="Finance" />
+          <img src="./before_website_view/img/slider/food.png" alt="Food" title="Food" />
+          <img src="./before_website_view/img/slider/healthcare.png" alt="Healthcare" title="Healthcare" />
+          <img src="./before_website_view/img/slider/logistics.png" alt="Logistics" title="Logistics" />
+          <img src="./before_website_view/img/slider/medical.png" alt="Medical" title="Medical" />
+          <img src="./before_website_view/img/slider/manufacturing.png" alt="Manufacturing" title="Manufacturing" />
+          <img src="./before_website_view/img/slider/procurement.png" alt="Procurement" title="Procurement" />
+          <img src="./before_website_view/img/slider/retailers.png" alt="Retailers" title="Retailers" />
+          <img src="./before_website_view/img/slider/realestate.png" alt="Real Estate" title="Real Estate" />
+          <img src="./before_website_view/img/slider/saaS.png" alt="SaaS" title="SaaS" />
+          <img src="./before_website_view/img/slider/socialNetwork.png" alt="Social Network" title="Social Network" />
+          <img src="./before_website_view/img/slider/transportation.png" alt="Transportation" title="Transportation" />
+          <img src="./before_website_view/img/slider/wholesale.png" alt="Wholesale" title="Wholesale" />
+        </div>
+        <div class="logo_items">
+          <img src="./before_website_view/img/slider/ecommerce.png" alt="E-Commerce" title="E-Commerce" />
+          <img src="./before_website_view/img/slider/car.png" alt="Automotive" title="Automotive" />
+          <img src="./before_website_view/img/slider/education.png" alt="Education" title="Education" />
+          <img src="./before_website_view/img/slider/entertainment.png" alt="Entertainment" title="Entertainment" />
+          <img src="./before_website_view/img/slider/finance.png" alt="Finance" title="Finance" />
+          <img src="./before_website_view/img/slider/food.png" alt="Food" title="Food" />
+          <img src="./before_website_view/img/slider/healthcare.png" alt="Healthcare" title="Healthcare" />
+          <img src="./before_website_view/img/slider/logistics.png" alt="Logistics" title="Logistics" />
+          <img src="./before_website_view/img/slider/medical.png" alt="Medical" title="Medical" />
+          <img src="./before_website_view/img/slider/manufacturing.png" alt="Manufacturing" title="Manufacturing" />
+          <img src="./before_website_view/img/slider/procurement.png" alt="Procurement" title="Procurement" />
+          <img src="./before_website_view/img/slider/retailers.png" alt="Retailers" title="Retailers" />
+          <img src="./before_website_view/img/slider/realestate.png" alt="Real Estate" title="Real Estate" />
+          <img src="./before_website_view/img/slider/saaS.png" alt="SaaS" title="SaaS" />
+          <img src="./before_website_view/img/slider/socialNetwork.png" alt="Social Network" title="Social Network" />
+          <img src="./before_website_view/img/slider/transportation.png" alt="Transportation" title="Transportation" />
+          <img src="./before_website_view/img/slider/wholesale.png" alt="Wholesale" title="Wholesale" />
+        </div>
       </div>
     </div>
   </body>
