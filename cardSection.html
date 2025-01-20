@@ -2,48 +2,323 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Card Section</title>
     </head>
     <style>
-        a {
-            text-decoration: none;
+        @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Raleway", serif;
+            background-color: antiquewhite;
         }
 
-        .btn {
-            background-color: blue;
+        .services_container {
+            width: 100%;
+            height: auto;
+        }
+
+        .services_container .top {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .services_container .top .service_heading {
+            width: 50%;
+            text-shadow: 1px 1px 4px #226456;
+            color: #febb1c;
+        }
+
+        .service_heading {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        .services_container .top .service_para {
+            width: 50%;
+            font-weight: 600;
+            /* line-height: 1.7rem; */
+        }
+
+        .service_para {
+            font-size: 1.5rem;
+        }
+
+        .space {
+            width: 100%;
+            height: 0.1rem;
+            background-color: #5c5c5c;
+            margin: 1rem 0px;
+        }
+
+        .bottom {
+            width: 100%;
+        }
+
+        .cards_container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+        .cards_container .card {
+            flex-basis: 30%;
+            max-width: 30%;
+            min-height: 10rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.7rem;
+            border: 1px solid gray;
             padding: 1rem;
-            border-radius: 10px;
-            border: none;
+            border-radius: 0.8rem;
+            transition: all 0.3s linear;
         }
 
-        .btn a {
-            color: white;
-
+        .card_line {
+            width: 100%;
+            height: 1px;
+            background-color: #18272f;
         }
 
-        .card_container {
-            width: 100%;            
+        /* Hover Animation Start */
+
+        /* Card Animation Start*/
+
+        .cards_container .card:hover {
+            border-radius: 0px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 12px -2px,
+                rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         }
+
+        /* Card Animation End*/
+
+        /* Heading Animation Start */
+        .line_animation {
+            color: #18272f;
+            position: relative;
+            text-decoration: none;
+            padding-bottom: 0.2rem;
+            width: fit-content;
+            cursor: pointer;
+        }
+
+        .line_animation::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #226456;
+            bottom: 0;
+            left: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .line_animation:hover::before {
+            transform-origin: left;
+
+            transform: scaleX(1);
+        }
+
+        /* Heading Animation End */
+
+        /* Hover Animation End */
+
+        /* media Query Start */
+
+        @media (min-width: 320px) {
+            .services_container {
+                padding: 0.6rem 0.7rem;
+            }
+
+            .services_container .top {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 0.4rem;
+            }
+
+            .services_container .top .service_heading,
+            .services_container .top .service_para {
+                width: 100%;
+            }
+
+            .service_heading {
+                font-size: medium;
+            }
+
+            .service_para {
+                font-size: 1.1rem;
+            }
+
+            .cards_container {
+                flex-direction: column;
+                gap: 2rem 0px;
+            }
+
+            .cards_container .card {
+                max-width: 100%;
+                min-height: 12rem;
+                padding: 1rem;
+            }
+        }
+
+        @media (min-width: 460px) {
+            .services_container .top {
+                max-width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .service_heading {
+                max-width: 25%;
+                font-size: 1.2rem;
+            }
+
+            .service_para {
+                max-width: 50%;
+                font-size: 1.2rem;
+            }
+
+            .cards_container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: start;
+                gap: 2rem 0px;
+            }
+
+            .cards_container .card {
+                max-width: 50%;
+                padding: 1rem;
+            }
+
+            .cards_container .card {
+                flex-basis: 30%;
+                max-width: 30%;
+                max-height: 13rem;
+                overflow-y: hidden;
+                line-height: 1.3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                gap: 0.5rem;
+                border: 1px solid gray;
+                padding: 1rem;
+                border-radius: 0.8rem;
+                transition: all 0.3s linear;
+            }
+        }
+
+        /* media Query End */
     </style>
 
     <body>
-        <nav>
-            <button class="btn"><a
-                    href="https://docs.google.com/document/d/1D-nast0dykBWilgEULhCK6FOTu_Qp5zyC81s3njPCY8/edit?tab=t.sxhc0aw1nfr"
-                    target="_blank">Document</a> </button>
-            <button class="btn"><a href="index.html">Main Page</a></button>
-        </nav>
-        <!-- Cludes Court Card Sectin Start -->
-        <div class="card_container">
-            <h1>Services</h1>
-            <div class="card"></div>
+        <div class="services_container">
+            <div class="top">
+                <span class="service_heading">
+                    <h1 class="line_animation">Services</h1>
+                </span>
+                <span class="service_para">
+                    <p>
+                        Specializing in Custom Web & Software Development, E-Commerce, and
+                        Mobile App Solutions
+                    </p>
+                </span>
+            </div>
+            <hr class="space" />
+            <div class="bottom">
+                <div class="cards_container">
+                    <div class="card">
+                        <h2 class="line_animation">Web Development</h2>
+                        <hr class="card_line" />
+                        <p>
+                            Clouds Court helps you uncover the opportunities of growth and
+                            innovation by building cutting-edge web applications that redefine
+                            emerging market trends.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h2 class="line_animation">Web Development</h2>
+                        <hr class="card_line" />
+                        <p>
+                            Clouds Court helps you uncover the opportunities of growth and
+                            innovation by building cutting-edge web applications that redefine
+                            emerging market trends and creates new opportunities for your
+                            business. We provide complete end-to-end website development
+                            services.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h2 class="line_animation">iOS & Android Apps</h2>
+                        <hr class="card_line" />
+                        <p>
+                            CloudsCourt offers robust and scalable mobile application
+                            development services across various platforms and industry
+                            verticals.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h2 class="line_animation">Digital Marketing</h2>
+                        <hr class="card_line" />
+                        <p>
+                            Our Digital Marketing strategy will likely comprise various
+                            digital marketing channels because your business is unique, that's
+                            why we don't offer a 'one-size-fits-all' solution. Instead, we
+                            offer a wide range of digital marketing services, enabling you to
+                            select the ones that are right fit for you
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h2 class="line_animation">Software Development</h2>
+                        <hr class="card_line" />
+                        <p>
+                            Cloudscourt is backed by a strong workforce of 30+ experts that
+                            have been delivering result-oriented software development services
+                            to SMEs across the globe for more than 10+ years. We are committed
+                            towards adhering to latest technology trends and
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h2 class="line_animation">E-Commerce</h2>
+                        <hr class="card_line" />
+                        <p>
+                            Clouds Court provides reliable ecommerce website development
+                            services with exceptional and powerful features along with
+                            maintenance services that empowers your business to surge ahead of
+                            the competition.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h2 class="line_animation">Product Development</h2>
+                        <hr class="card_line" />
+                        <p>
+                            Cloudscourt will be your technology business partner for Custom
+                            Product development to the complete process of daily or business
+                            idea digitally to market in SAAS model. It includes identifying
+                            market needs, conceptualizing the product, building the product
+                            roadmap, launching the product, & implementation.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Cludes Court Card Sectin End -->
-
     </body>
 
 </html>
