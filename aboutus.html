@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Icon CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+        <!-- line Animation -->
+        <link rel="stylesheet" href="./before_website_view/css/style.css">
+        <title>About Us Section</title>
+    </head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #226456;
+            --secondray-color: #febb1c;
+            --font-raleway: "Raleway", serif;
+        }
+
+        body {
+            background-color: antiquewhite;
+            width: 100%;
+        }
+
+        .about_main {
+            width: 100%;
+            height: 60vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 5rem;
+            color: #2c2c2c;
+        }
+
+        .about_main .left {
+            width: 35%;
+            height: auto;
+        }
+
+        .about_main .left img {
+            width: 100%;
+            height: auto;
+        }
+
+        .about_main .right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .about_main .right h1,
+        .about_main .right h3 {
+            font-family: var(--font-raleway);
+        }
+
+        .about_main .right h1 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            background-color: var(--primary-color);
+            color: var(--secondray-color);
+            padding: 0.5rem;
+            border-radius: 0.3rem;
+        }
+
+        .about_main .right h3 {
+            font-weight: 500;
+            font-size: 2.2rem;
+            text-transform: capitalize;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .about_main .right h1:hover {
+            background-color: var(--secondray-color);
+            color: var(--primary-color);
+        }
+
+        .about_main .right p {
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+        }
+
+        .about_main .right ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .about_main .right ul li {
+            list-style: none;
+            font-size: 1.3rem;
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .about_main .right ul li i {
+            background-color: var(--primary-color);
+            color: var(--secondray-color);
+            padding: 0.2rem;
+            font-size: 1.6rem;
+            border-radius: 50%;
+        }
+
+        .about_main .right ul li:hover {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+        }
+
+        strong,
+        a {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+    </style>
+
+    <body>
+        <div class="about_main">
+            <div class="left">
+                <img src="./before_website_view/img/about/about.png" alt="" />
+            </div>
+            <div class="right">
+                <h1 class="line_animation">What We Offer</h1>
+                <h3>We are here to be your Technology business partner.</h3>
+                <p>
+                    <strong><a href="#">Clouds Court</a></strong> is a provider of quality work in multiple Sectors of
+                    Information Technology and is located in the United States of America,
+                    United Arab Emirates, and Pakistan. <strong><a href="#">Clouds Court</a></strong> has the aptitude
+                    and
+                    mastery to encourage complex business arrangements.
+                </p>
+                <ul>
+                    <!-- Include icon CDN at the top -->
+                    <li><i class="ri-check-fill"></i>Graphic and Logo Designing</li>
+                    <li>
+                        <i class="ri-check-fill"></i>Website Designing and Development
+                    </li>
+                    <li><i class="ri-check-fill"></i>E-Commerce Solutions</li>
+                    <li><i class="ri-check-fill"></i>Custom Software Development</li>
+                    <li><i class="ri-check-fill"></i>Mobile App Development</li>
+                    <li><i class="ri-check-fill"></i>Hardware Consulting Services</li>
+                    <li>
+                        <i class="ri-check-fill"></i>IoT (Internet of Things) Solutions
+                    </li>
+                </ul>
+                <span><button>View More</button></span>
+            </div>
+        </div>
+    </body>
+
+</html>
