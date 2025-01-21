@@ -7,7 +7,7 @@
         <!-- Icon CDN -->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
         <!-- line Animation -->
-        <link rel="stylesheet" href="./before_website_view/css/style.css">
+        <link rel="stylesheet" href="./before_website_view/css/style.css" />
         <title>About Us Section</title>
     </head>
     <style>
@@ -41,13 +41,13 @@
         }
 
         .about_main .left {
-            width: 35%;
-            height: auto;
+            width: 45%;
+            height: 100%;
         }
 
         .about_main .left img {
             width: 100%;
-            height: auto;
+            height: 35rem;
         }
 
         .about_main .right {
@@ -121,21 +121,207 @@
             color: var(--primary-color);
             text-decoration: underline;
         }
+
+        .custom-btn {
+            width: 130px;
+            height: 40px;
+            color: #fff;
+            border-radius: 5px;
+            font-family: var(--font-raleway);
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+                7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        .btn-7 {
+            background: linear-gradient(0deg,
+                    var(--primary-color) 0%,
+                    var(--primary-color) 100%);
+            line-height: 42px;
+            padding: 0;
+            border: none;
+        }
+
+        .btn-7 span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn-7:before,
+        .btn-7:after {
+            position: absolute;
+            content: "";
+            right: 0;
+            bottom: 0;
+            background: var(--primary-color);
+            box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
+                -4px -4px 5px 0px rgba(255, 255, 255, 0.9),
+                7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-7:before {
+            height: 0%;
+            width: 2px;
+        }
+
+        .btn-7:after {
+            width: 0%;
+            height: 2px;
+        }
+
+        .btn-7:hover {
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-7:hover:before {
+            height: 100%;
+        }
+
+        .btn-7:hover:after {
+            width: 100%;
+        }
+
+        .btn-7 span:before,
+        .btn-7 span:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background: var(--primary-color);
+            box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
+                -4px -4px 5px 0px rgba(255, 255, 255, 0.9),
+                7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-7 span:before {
+            width: 2px;
+            height: 0%;
+        }
+
+        .btn-7 span:after {
+            height: 2px;
+            width: 0%;
+        }
+
+        .btn-7 span:hover:before {
+            height: 100%;
+        }
+
+        .btn-7 span:hover:after {
+            width: 100%;
+        }
+
+        /* Media Query Start */
+
+        /* Extra Small Devices (Mobile Phones) */
+        @media (max-width: 320px) {
+            .about_main {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap-reverse;
+                justify-content: space-between;
+                gap: 3rem;
+                padding: 0px 1.5rem;
+                margin-top: 30px;
+            }
+
+            .about_main .left {
+                width: 100%;
+                height: 100%;
+            }
+
+            .about_main .left img {
+                width: 100%;
+                height: 20rem;
+                border-radius: 0.4rem;
+            }
+
+            .about_main .right {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .about_main .right h1 {
+                font-size: 1rem;
+            }
+
+            .about_main .right h3 {
+                font-weight: 500;
+                font-size: 1.5rem;
+                text-transform: capitalize;
+                transition: all 0.6s ease-in-out;
+            }
+
+            .about_main .right p {
+                font-size: 0.9rem;
+                line-height: 1.5rem;
+            }
+
+            .about_main .right ul li {
+                font-size: 1.2rem;
+                gap: 0.7rem;
+            }
+
+            .about_main .right ul li i {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Small Devices (Portrait Tablets and Large Phones) */
+        @media (min-width: 321px) and (max-width: 480px) {
+            /* Your CSS for small devices */
+        }
+
+        /* Medium Devices (Tablets) */
+        @media (min-width: 481px) and (max-width: 768px) {
+            /* Your CSS for medium devices */
+        }
+
+        /* Large Devices (Desktops) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            /* Your CSS for large devices */
+        }
+
+        /* Extra Large Devices (Large Desktops) */
+        @media (min-width: 1025px) and (max-width: 1200px) {
+            /* Your CSS for extra large devices */
+        }
+
+        /* Ultra-Wide Screens */
+        @media (min-width: 1201px) {
+            /* Your CSS for ultra-wide screens */
+        }
+
+        /* Media Query End */
     </style>
 
     <body>
         <div class="about_main">
             <div class="left">
-                <img src="./before_website_view/img/about/about.png" alt="" />
+                <img src="./before_website_view/img/about/19430.jpg" alt="" />
             </div>
             <div class="right">
                 <h1 class="line_animation">What We Offer</h1>
                 <h3>We are here to be your Technology business partner.</h3>
                 <p>
-                    <strong><a href="#">Clouds Court</a></strong> is a provider of quality work in multiple Sectors of
-                    Information Technology and is located in the United States of America,
-                    United Arab Emirates, and Pakistan. <strong><a href="#">Clouds Court</a></strong> has the aptitude
-                    and
+                    <strong><a href="#">Clouds Court</a></strong> is a provider of quality
+                    work in multiple Sectors of Information Technology and is located in
+                    the United States of America, United Arab Emirates, and Pakistan.
+                    <strong><a href="#">Clouds Court</a></strong> has the aptitude and
                     mastery to encourage complex business arrangements.
                 </p>
                 <ul>
@@ -152,7 +338,9 @@
                         <i class="ri-check-fill"></i>IoT (Internet of Things) Solutions
                     </li>
                 </ul>
-                <span><button>View More</button></span>
+                <span><button class="custom-btn btn-7">
+                        <span>Read More</span>
+                    </button></span>
             </div>
         </div>
     </body>
