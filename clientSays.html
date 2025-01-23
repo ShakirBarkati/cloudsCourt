@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Learning is everything - Spoify" />
+        <title>Testimonials - CSS GRID</title>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    </head>
+    <style>
+        .section-testmonials {
+            font-family: Poppins;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .column-testmonials {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 20%;
+        }
+
+        .section-details {
+            border-left: 10px solid #ffcb00;
+            padding-left: 20px;
+        }
+
+        .name-section {
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #650061 !important;
+            line-height: 1.2em;
+            margin: 0;
+        }
+
+        .title-section b {
+            color: #650061;
+        }
+
+        .title-section {
+            color: #000;
+            font-family: Poppins;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0;
+        }
+
+        .navigation-testmonials {
+            display: flex;
+            gap: 10px;
+        }
+
+        .swiper-testmonials {
+            width: 80%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .section-testmonials {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .swiper-testmonials {
+                width: 100%;
+            }
+        }
+
+        .swiper-testmonials .swiper-slide {
+            border-radius: 10px;
+            background: linear-gradient(118deg, #7c1a78 10.88%, #43044a 83.88%);
+            display: flex;
+            padding: 30px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            transform: scale(0.9) !important;
+            filter: blur(1px) grayscale(0.5);
+            transition: 0.2s;
+        }
+
+        .swiper-testmonials .swiper-slide * {
+            margin: 0;
+        }
+
+        .swiper-testmonials .swiper-slide-active {
+            filter: blur(0px) !important;
+            transform: scale(1) !important;
+        }
+
+        .card-slide {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .head-slide {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-slide {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .title-slide h4 {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .title-slide h6 {
+            color: #ffcb00;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .text-slide {
+            color: #fff;
+            font-family: Poppins;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .swiper-button-testmonials-next,
+        .swiper-button-testmonials-prev {
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .header-slide svg {
+                width: 50px;
+            }
+
+            .title-slide h4 {
+                font-size: 14px;
+            }
+
+            .swiper-testmonials .swiper-slide {
+                padding: 20px;
+            }
+        }
+    </style>
+
+    <body>
+        <div class="section-testmonials">
+            <div class="column-testmonials">
+                <!-- If we need navigation buttons -->
+                <div class="navigation-testmonials">
+                    <div class="swiper-button-testmonials-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="65" viewBox="0 0 64 65" fill="none">
+                            <circle cx="32" cy="32" r="31" transform="matrix(-1 0 0 1 64 0.947266)" stroke="#FFCB00"
+                                stroke-width="2" />
+                            <path
+                                d="M34.5967 20.9197C35.1642 20.3521 36.0843 20.3521 36.6519 20.9197C37.2194 21.4872 37.2194 22.4073 36.6519 22.9749L34.5967 20.9197ZM36.6519 22.9749L24.3207 35.306L22.2655 33.2509L34.5967 20.9197L36.6519 22.9749Z"
+                                fill="#FFCB00" />
+                            <path
+                                d="M34.9724 45.9749C35.5399 46.5424 36.4601 46.5424 37.0276 45.9749C37.5951 45.4073 37.5951 44.4872 37.0276 43.9197L34.9724 45.9749ZM37.0276 43.9197L24.6964 31.5885L22.6412 33.6437L34.9724 45.9749L37.0276 43.9197Z"
+                                fill="#FFCB00" />
+                        </svg>
+                    </div>
+                    <div class="swiper-button-testmonials-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="65" viewBox="0 0 64 65" fill="none">
+                            <circle cx="32" cy="32.9473" r="32" fill="#FFCB00" />
+                            <path
+                                d="M29.4033 20.9197C28.8358 20.3521 27.9157 20.3521 27.3481 20.9197C26.7806 21.4872 26.7806 22.4073 27.3481 22.9749L29.4033 20.9197ZM27.3481 22.9749L39.6793 35.306L41.7345 33.2509L29.4033 20.9197L27.3481 22.9749Z"
+                                fill="white" />
+                            <path
+                                d="M29.0276 45.9749C28.4601 46.5424 27.5399 46.5424 26.9724 45.9749C26.4049 45.4073 26.4049 44.4872 26.9724 43.9197L29.0276 45.9749ZM26.9724 43.9197L39.3036 31.5885L41.3588 33.6437L29.0276 45.9749L26.9724 43.9197Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider main container -->
+            <div class="swiper-testmonials">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slide -->
+                    <div class="swiper-slide">
+                        <div class="card-slide">
+                            <div class="head-slide">
+                                <div class="header-slide">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="81" viewBox="0 0 80 81"
+                                        fill="none">
+                                        <circle cx="40" cy="40.0901" r="40" fill="white" />
+                                    </svg>
+                                    <div class="title-slide">
+                                        <h4>Mussum Ipsum</h4>
+                                        <h6>Mussum Ipsum</h6>
+                                    </div>
+                                </div>
+
+                                <svg width="47" height="48" viewBox="0 0 47 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="0.590088" width="47" height="47" rx="10" fill="white" />
+                                </svg>
+                            </div>
+                            <p class="text-slide">
+                                Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite
+                                então bota uma pinga aí cumpadi! Quem manda na minha terra sou
+                                euzis!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Slide -->
+                    <div class="swiper-slide">
+                        <div class="card-slide">
+                            <div class="head-slide">
+                                <div class="header-slide">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="81" viewBox="0 0 80 81"
+                                        fill="none">
+                                        <circle cx="40" cy="40.0901" r="40" fill="white" />
+                                    </svg>
+                                    <div class="title-slide">
+                                        <h4>Mussum Ipsum</h4>
+                                        <h6>Mussum Ipsum</h6>
+                                    </div>
+                                </div>
+
+                                <svg width="47" height="48" viewBox="0 0 47 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="0.590088" width="47" height="47" rx="10" fill="white" />
+                                </svg>
+                            </div>
+                            <p class="text-slide">
+                                Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite
+                                então bota uma pinga aí cumpadi! Quem manda na minha terra sou
+                                euzis!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Slide -->
+                    <div class="swiper-slide">
+                        <div class="card-slide">
+                            <div class="head-slide">
+                                <div class="header-slide">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="81" viewBox="0 0 80 81"
+                                        fill="none">
+                                        <circle cx="40" cy="40.0901" r="40" fill="white" />
+                                    </svg>
+                                    <div class="title-slide">
+                                        <h4>Mussum Ipsum</h4>
+                                        <h6>Mussum Ipsum</h6>
+                                    </div>
+                                </div>
+
+                                <svg width="47" height="48" viewBox="0 0 47 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="0.590088" width="47" height="47" rx="10" fill="white" />
+                                </svg>
+                            </div>
+                            <p class="text-slide">
+                                Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite
+                                então bota uma pinga aí cumpadi! Quem manda na minha terra sou
+                                euzis!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Slide -->
+                    <div class="swiper-slide">
+                        <div class="card-slide">
+                            <div class="head-slide">
+                                <div class="header-slide">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="81" viewBox="0 0 80 81"
+                                        fill="none">
+                                        <circle cx="40" cy="40.0901" r="40" fill="white" />
+                                    </svg>
+                                    <div class="title-slide">
+                                        <h4>Mussum Ipsum</h4>
+                                        <h6>Mussum Ipsum</h6>
+                                    </div>
+                                </div>
+
+                                <svg width="47" height="48" viewBox="0 0 47 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="0.590088" width="47" height="47" rx="10" fill="white" />
+                                </svg>
+                            </div>
+                            <p class="text-slide">
+                                Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite
+                                então bota uma pinga aí cumpadi! Quem manda na minha terra sou
+                                euzis!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Slide -->
+                    <div class="swiper-slide">
+                        <div class="card-slide">
+                            <div class="head-slide">
+                                <div class="header-slide">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="81" viewBox="0 0 80 81"
+                                        fill="none">
+                                        <circle cx="40" cy="40.0901" r="40" fill="white" />
+                                    </svg>
+                                    <div class="title-slide">
+                                        <h4>Mussum Ipsum</h4>
+                                        <h6>Mussum Ipsum</h6>
+                                    </div>
+                                </div>
+
+                                <svg width="47" height="48" viewBox="0 0 47 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="0.590088" width="47" height="47" rx="10" fill="white" />
+                                </svg>
+                            </div>
+                            <p class="text-slide">
+                                Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite
+                                então bota uma pinga aí cumpadi! Quem manda na minha terra sou
+                                euzis!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
